@@ -28,8 +28,7 @@ The Frontend is a single page application. It is divided in two main sections wi
 You may test the API endpoint manually using the input range to adjust the query parameter ```time``` or by directly clicking the _Consultar_ button. Toggle between these two modes by clicking _Manual_ or _Automático_ buttons.
 
 <!-- Screenshot -->
-<!-- MISSING LINK -->
-[]()
+![Frontend Screenshot API](https://github.com/hoiast/SignalFaker/raw/main/frontend/screenshot-api.jpg)
 
 #### Continuous Websocket Data
 
@@ -40,5 +39,4 @@ To adjust the frequency of the data stream, you may use the input range to pick 
 It is possible to request data in intervals smaller than 20 milliseconds. However, the frontend application will not be able to display them all in sync with the data stream due performance issues in reactivity and chart rendering. 
 
 <!-- Screenshot -->
-<!-- MISSING LINK -->
-[]()
+![Frontend Screenshot Websocket](https://github.com/hoiast/SignalFaker/raw/main/frontend/screenshot-websocket.jpg)

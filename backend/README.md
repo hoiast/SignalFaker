@@ -56,28 +56,28 @@ The following messages are supported:
 - ```start``` - Request the server to starts sending signals.
     ```json
     {
-        type: "start",
+        "type": "start"
     }
     ```
 
 - ```stop``` - Request the server to stops sending signals.
     ```json
     {
-        type: "stop",
+        "type": "stop"
     }
     ```
 - ```restart``` - Request the server data faker to resets its clock and starts sending signals. 
     ```json
     {
-        type: "restart",
+        "type": "restart"
     }
     ```
 - ```setInterval``` - Request the server data faker to sets the interval between signals in a continuos flow.
     ```json
     {
-        type: "setInterval",
-        payload: {
-            interval: number
+        "type": "setInterval",
+        "payload": {
+            "interval": 100
         }
     }
     ```
