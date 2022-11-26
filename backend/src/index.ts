@@ -2,8 +2,8 @@ import Koa from "koa";
 import json from "koa-json";
 import logger from "koa-logger";
 import websockify from "koa-websocket";
-import router from "./routes";
 import cors from "@koa/cors";
+import router from "./routes";
 import websocketConfiguration from "./websocket";
 
 const server = websockify(new Koa());

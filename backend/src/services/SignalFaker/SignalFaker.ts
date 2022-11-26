@@ -1,5 +1,3 @@
-import type WebSocket from "ws";
-
 type Signal = {
   time: number; // time in milliseconds
   signal: number; // signal value
@@ -8,7 +6,7 @@ type Signal = {
 class SignalFaker {
   private _referenceTime = new Date().getTime();
 
-  constructor(private _websocket: WebSocket | null = null) {}
+  constructor() {}
 
   /**
    * @description Resets the reference time of the signal faking algorithm
