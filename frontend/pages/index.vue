@@ -6,11 +6,12 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import SignalRequester from '~/components/SignalRequester.vue'
+import Vue from "vue";
+import SignalRequester from "~/components/SignalRequester.vue";
+import SignalChartSectionInterface from "~/components/SignalChart/SectionInterface.vue";
 
 export default Vue.extend({
-  name: 'IndexPage',
-  components: { SignalRequester },
-})
+  name: "IndexPage",
+  components: { SignalRequester, SignalChartSectionInterface },
+});
 </script>
