@@ -7,7 +7,7 @@ export default class SignalFakerWebsocketWrapper {
   private _interval: number = 100;
   private _timeoutId: NodeJS.Timeout | null = null;
 
-  constructor(private _websocket: WebSocket | null = null) {}
+  constructor(private _websocket: WebSocket) {}
 
   /**
    * @description Resets the reference time of the signal faking algorithm and (re)start a continuous fake signal.
@@ -76,12 +76,6 @@ export default class SignalFakerWebsocketWrapper {
    * @returns true if the signal was sent, false if there was no websocket to send the signal to
    */
   private sendSignal(signal: Signal): boolean {
-    if (!this._websocket) {
-      console.log("There is no Websocket to send the signal to");
-      return false;
-    }
-
-    // . Send signal to websocket
     const json = JSON.stringify(signal);
     this._websocket.send(json);
     return true;
