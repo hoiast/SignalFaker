@@ -53,8 +53,7 @@ export default class SignalFakerWebsocketWrapper {
   private continuousFakeSignal(): void {
     const fakeSignal = this._signalFaker.fakeSignal();
 
-    const isSignalSent = this.sendSignal(fakeSignal);
-    if (!isSignalSent) return;
+    this.sendSignal(fakeSignal);
 
     this._timeoutId = setTimeout(() => {
       this.continuousFakeSignal();
@@ -72,12 +71,12 @@ export default class SignalFakerWebsocketWrapper {
   }
 
   /**
+   * @description Send signal as a message to _websocket client
    * @param signal : Signal
-   * @returns true if the signal was sent, false if there was no websocket to send the signal to
+   * @returns void
    */
-  private sendSignal(signal: Signal): boolean {
+  private sendSignal(signal: Signal): void {
     const json = JSON.stringify(signal);
     this._websocket.send(json);
-    return true;
   }
 }
