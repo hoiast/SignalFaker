@@ -28,6 +28,10 @@ const chartOptions: Ref<ChartOptions> = ref({
         display: true,
         text: 'Tempo (ms)',
       },
+      ticks:{
+        maxRotation: 45,
+        minRotation: 45,
+      }
     },
     y: {
       title: {
